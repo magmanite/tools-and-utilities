@@ -3,5 +3,6 @@ docker run \
     -it --rm \
     -v "$( pwd )":/data \
     -w /data \
+    --init \
     magmanite/docker-angular-cli \
-    ng "$@"
+    "$@"
