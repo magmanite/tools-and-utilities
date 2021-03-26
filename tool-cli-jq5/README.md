@@ -5,7 +5,7 @@ It is a simple wrap for JQ.
 # Install
 You can use the Docker image
 ```
-echo some-file.json | docker run --rm -i magmanite/tool-json5 '.'
+cat some-file.json | docker run --rm -i magmanite/tool-json5 '.'
 ```
 
 You can also copy convenience script shortcuts/jq5 to your bin directory
