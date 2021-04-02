@@ -12,8 +12,8 @@ This is Angular CLI Docker image.
   - ng: Convenience script.
 
 ## Changelog
-- **2021.03.31**:
-  - Use newer NPM image version 2021.04.02
+- **2021.04.03**:
+  - Use newer NPM image version 2021.04.03
 - **2021.03.31**:
   - Initial
   - NPM image version 7.7.6
