@@ -12,6 +12,7 @@ This is Node Package Manager.
 ## Changelog
 - **2021.04.03**
   - Update npm to version 7.8.0
+  - Update base image to use "slim" version (node:15.12.0-slim).
 - **2021.04.02**
   - Update tag to follow conventional versioning scheme
 - **7.7.6**:
