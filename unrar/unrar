@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# This is a convenience shell script to run unrar within a Docker container.
+# All parameters are passed to the executable running inside the container.
+#
+# For this script to work, file to be processed (the RAR file)
+# have to be in the current directory.
+#
+
+docker run \
+    --rm -it \
+    --init \
+    -v "$( pwd )":/source  \
+    -w /source magmanite/unrar \
+    unrar "$@"

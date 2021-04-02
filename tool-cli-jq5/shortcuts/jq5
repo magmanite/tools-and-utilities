@@ -1,2 +1,0 @@
-#!/bin/bash
-docker run --rm --init -i -a stdin -a stdout -a stderr magmanite/tool-cli-jq5 "$@"

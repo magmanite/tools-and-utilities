@@ -1,8 +1,9 @@
 #!/bin/bash
 docker run \
     -it --rm \
+    --init \
+    -a stdin -a stdout -a stderr \
     -v "$( pwd )":/data \
     -w /data \
-    --init \
-    magmanite/docker-angular-cli \
+    magmanite/angular-cli \
     "$@"
