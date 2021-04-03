@@ -1,4 +1,4 @@
-# BUILD: magmanite/angular-cli:2021.04.03
+# BUILD: magmanite/angular-cli:2021.04.03b
 
 FROM magmanite/npm-cli:2021.04.03
 RUN npm install -g @angular/cli \

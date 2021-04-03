@@ -12,6 +12,9 @@ This is Angular CLI Docker image.
   - ng: Convenience script.
 
 ## Changelog
+- **2021.04.03b**:
+  - Update to Angular CLI version 11.2.7
+  - [Changelog for Angular CLI](https://github.com/angular/angular-cli/releases/tag/v11.2.7)
 - **2021.04.03**:
   - Use newer NPM image version 2021.04.03
 - **2021.03.31**:
