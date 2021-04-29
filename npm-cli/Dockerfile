@@ -1,6 +1,6 @@
-# BUILD: magmanite/npm-cli:2021.04.09
+# BUILD: magmanite/npm-cli:2021.04.29
 
-FROM node:15.12.0-slim
-RUN npm install -g npm@7.9.0 \
+FROM node:16.0.0-slim
+RUN npm install -g npm@7.11.1 \
     && npm cache clean --force
 ENTRYPOINT [ "/usr/local/bin/npm" ]

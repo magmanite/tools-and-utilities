@@ -10,6 +10,10 @@ This is Node Package Manager.
   - [Node Docker official image](https://hub.docker.com/_/node)
 
 ## Changelog
+- **2021.04.29**
+  - Update node to version 16.0.0-slim
+  - Update npm to version 7.11.1
+  - [Changes](https://github.com/npm/cli/releases/tag/v7.11.1)
 - **2021.04.09**
   - Update npm to version 7.9.0
   - [Changes](https://github.com/npm/cli/releases/tag/v7.9.0)

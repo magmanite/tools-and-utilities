@@ -3,10 +3,11 @@
 touch "${HOME}/.npmrc"
 
 docker run \
-    -it --rm \
+    -i --rm \
     --init \
-    -a stdin -a stdout -a stderr \
-    -v "${HOME}/.npmrc:/root/.npmrc" \
+    -a STDIN -a STDOUT -a STDERR \
+    --user "$( id -u ):$( id -g )" \
+    -v "${HOME}/.npmrc:/.npmrc" \
     -v "$( pwd )":/data \
     -w /data \
     magmanite/npm-cli \

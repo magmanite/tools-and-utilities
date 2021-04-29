@@ -18,6 +18,8 @@ This is a CLI parser for JSON 5. It is a simple wrap for JQ.
 - [JSON5 Specifications](https://spec.json5.org/)
 
 ## Changelog
+- **2021.04.29**
+  - Update Node docker image
 - **2021.03.26**
   - This is initial version using node:alpine3.13 image.
   - Node: alpine3.13

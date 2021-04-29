@@ -1,4 +1,7 @@
 #!/bin/bash
-docker run --rm --init -i \
-    -a stdin -a stdout -a stderr \
+docker run \
+    -i --rm \
+    --init \
+    --user "$( id -u ):$( id -g )" \
+    -a STDIN -a STDOUT -a STDERR \
     magmanite/tool-cli-jq5 "$@"
