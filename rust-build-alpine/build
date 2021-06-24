@@ -1,0 +1,15 @@
+#!/bin/bash
+# This is a convinence script to run Cargo from your CLI.
+# It utilises a common caching volume so that it doesn't have to keep downloading dependencies.
+
+CARGO_CACHE_VOLUME="rust-cargo-registry-cache"
+
+docker run -i --rm --init \
+    -a STDIN -a STDOUT -a STDERR \
+    -v "$( pwd )":/work \
+    -v "${CARGO_CACHE_VOLUME}":/usr/local/cargo/registry \
+    -w /work \
+    --user "$( id -u):$( id -g )" \
+    -e RUSTFLAGS=-Clinker=musl-gcc \
+    magmanite/rust-build-alpine \
+    cargo build --release --target=x86_64-unknown-linux-musl

@@ -1,4 +1,4 @@
-# BUILD: magmanite/tool-cli-jq5:2021.04.29
+# BUILD: magmanite/tool-cli-jq5:2021.06.19
 
 FROM node:alpine3.13
 RUN npm install --global json5 \

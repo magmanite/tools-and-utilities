@@ -3,12 +3,25 @@
 # Make sure the first line of your Dockerfile start with (without the quotes "# BUILD: "
 
 BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+BUILD_LIST=( "npm-cli" )
 
-for definition in $( ls -d -1 */ )
-do
-    definition="${definition::${#definition}-1}"
-    dockerDir="${BASE_DIR}/${definition}"
-    printf "Working on ${definition} ... "
+# Populate build order
+for path in $( ls -d -1 */ ); do
+    path="${path::${#path}-1}"
+    if [[ ! " ${BUILD_LIST[@]} " =~ " ${path} " ]]; then
+        BUILD_LIST+=("${path}")
+    fi
+done
+
+# Iterate over build list
+for path in ${BUILD_LIST[@]}; do
+    printf "Working on ${path} ... "
+
+    dockerDir="${BASE_DIR}/${path}"
+    if [[ ! -d "${dockerDir}" ]]; then
+        printf "SKIP (${path} does not exists.).\n"
+        continue
+    fi
 
     dockerFile="${dockerDir}/Dockerfile"
     if [[ ! -r "${dockerFile}" ]]; then
