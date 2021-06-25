@@ -6,7 +6,7 @@ BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 BUILD_LIST=( "npm-cli" )
 
 # Populate build order
-for path in $( ls -d -1 */ ); do
+for path in $( cd ${BASE_DIR}; ls -d -1 */ ); do
     path="${path::${#path}-1}"
     if [[ ! " ${BUILD_LIST[@]} " =~ " ${path} " ]]; then
         BUILD_LIST+=("${path}")
